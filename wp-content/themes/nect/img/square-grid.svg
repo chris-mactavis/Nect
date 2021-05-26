@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 566 566">
+  <defs>
+    <pattern id="circles" width="10" height="10" patternUnits="userSpaceOnUse" >
+  <!-- start pattern-->
+        <circle cx="5" cy="2" r="2" strike="none" fill="#a351cc" />
+  <!-- end pattern -->
+    </pattern>
+  </defs>
+  <rect width="400" height="400" transform="translate(283 0) rotate(45)" opacity="0.2" fill="url(#circles)"/>
+</svg>
