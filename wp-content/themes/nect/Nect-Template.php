@@ -1,11 +1,11 @@
-<?php 
+<?php
   //  Template Name: NECT Template
-    include('modules/header.php'); 
+    include('modules/header.php');
 ?>
 
 <?php if( have_rows('page_template') ): while (have_rows('page_template')): the_row(); ?>
     <div class="main-container">
-        <?php if( get_row_layout() == 'home_banner' ): ?>   
+        <?php if( get_row_layout() == 'home_banner' ): ?>
             <section class="imagebg height-80 intro" data-overlay=2>
                 <div class="background-image-holder" style="background:url(<?= get_sub_field('background'); ?>);">
                     <img alt="image" src="<?= get_sub_field('background'); ?>" />
@@ -183,7 +183,7 @@
                                                 <div class="boardMember__job"><?= get_field('members_position'); ?></div>
                                             </div>
                                         </div>
-                                    <?php endwhile; endif;  wp_reset_postdata(); ?> 
+                                    <?php endwhile; endif;  wp_reset_postdata(); ?>
                                 </div>
                                 <div class="boardBlock__detailWrapper">
                                     <div id="bodMember" class="boardMemberDetail">
@@ -255,13 +255,13 @@
                                 <?= get_field('project_description'); ?>
                                     <div class="">
                                         <?php if( have_rows('project_list') ): while(have_rows('project_list')) : the_row(); ?>
-                                        <?php 
+                                        <?php
                                             $modeTitle=preg_replace('/\s/','',get_sub_field('title'));
                                             $theTitle=preg_replace('/\s/','',get_the_title());
                                             $newModalTitle = str_replace(',', '', $modeTitle);
                                         ?>
-                                            <a href="#" class="project-droplink" data-toggle="modal" data-target="#<?php echo $theTitle.$modeTitle ?>"><?= get_sub_field('title'); ?></a>
-                                            <div class="modal fade" id="<?php echo $theTitle.$modeTitle ?>" tabindex="-1" role="dialog" aria-labelledby="projectDetail" aria-hidden="true">
+                                            <a href="#" class="project-droplink" data-toggle="modal" data-target="#<?php echo $theTitle.$newModalTitle ?>"><?= get_sub_field('title'); ?></a>
+                                            <div class="modal fade" id="<?php echo $theTitle.$newModalTitle ?>" tabindex="-1" role="dialog" aria-labelledby="projectDetail" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -300,7 +300,7 @@
                             <div class="col-md-12 col-sm-12">
                                 <hr class="mb48 mt32" style="border-color: #b9b388;">
                             </div>
-                        <?php endwhile; endif;  wp_reset_postdata(); ?> 
+                        <?php endwhile; endif;  wp_reset_postdata(); ?>
                     </div>
                 </div>
             </section>
@@ -361,7 +361,7 @@
                                     </article>
                                 </a>
                             </div>
-                        <?php endwhile; endif;  wp_reset_postdata(); ?> 
+                        <?php endwhile; endif;  wp_reset_postdata(); ?>
                     </div>
                 </div>
             </section>
@@ -442,7 +442,7 @@
                             <p class="video-content"><?= get_field('video_description'); ?></p>
                             </div>
                         </div>
-                    <?php endwhile; endif;  wp_reset_postdata(); ?> 
+                    <?php endwhile; endif;  wp_reset_postdata(); ?>
                     </div>
                 </div>
             </section>
@@ -504,11 +504,11 @@
                                         <a class="download_resources" target="_blank" download  href="<?= get_sub_field('btn_link'); ?>">
                                             <span><?= get_sub_field('btn_text'); ?></span>
                                         </a>
-                                    <?php endwhile; endif; ?> 
+                                    <?php endwhile; endif; ?>
                                 </div>
                             </div>
                         </div>
-                    <?php endwhile; endif;  wp_reset_postdata(); ?> 
+                    <?php endwhile; endif;  wp_reset_postdata(); ?>
                     </div>
                 </div>
             </section>
@@ -563,7 +563,7 @@
                         </div>
                     </div>
                 </div>
-            </section> 
+            </section>
 
         <?php endif; ?>
     </div>
@@ -835,7 +835,7 @@
                 </div>
             </div>
         </section> -->
-        
+
         <!-- <section class="nect-projects">
             <div class="container">
                 <div class="row">
